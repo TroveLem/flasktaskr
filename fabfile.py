@@ -17,6 +17,6 @@ def push():
     local("git push origin master")
 
 def prepare():
-    # test()
+    test()
     commit()
     push()
