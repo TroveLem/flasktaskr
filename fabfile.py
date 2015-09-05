@@ -22,3 +22,25 @@ def prepare():
     test()
     commit()
     push()
+
+# deploying
+
+
+def pull():
+    local("git pull origin master")
+
+
+def heroku():
+    local("git push heroku master")
+
+    
+def heroku_test():
+    local("heroku run nosetest -v")
+
+
+def deploy():
+    pull()
+    test()
+    commit()
+    heroku()
+    heroku_test()
