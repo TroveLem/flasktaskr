@@ -5,8 +5,10 @@ from fabric.contrib.console import confirm
 # prepare for deployment
 
 def test():
-    local("nosetests -v")
-
+    with settings(warn_only=True):
+        result = local("nosetests -v", capture=True)
+    if result.failed and not confirm("Tests failed. Continue?"):
+        abort("Aborted at user requests.")
 
 def commit():
     message = raw_input("Enter a git commit message: ")
