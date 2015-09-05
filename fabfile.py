@@ -23,7 +23,7 @@ def prepare():
     commit()
     push()
 
-# deployingheroku
+# deploy
 
 
 def pull():
@@ -39,11 +39,15 @@ def heroku_test():
 
 
 def deploy():
-    pull()
+    # pull()
     test()
-    commit()
+    # commit()
     heroku()
     heroku_test()
+
+
+# rollback
+
 
 def rollback():
     local("heroku rollback")
