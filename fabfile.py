@@ -33,7 +33,7 @@ def pull():
 def heroku():
     local("git push heroku master")
 
-    
+
 def heroku_test():
     local("heroku run nosetest -v")
 
@@ -44,3 +44,6 @@ def deploy():
     commit()
     heroku()
     heroku_test()
+
+def rollback():
+    local("heroku rollback")
