@@ -23,7 +23,7 @@ def prepare():
     commit()
     push()
 
-# deploying
+# deployingheroku
 
 
 def pull():
@@ -35,7 +35,7 @@ def heroku():
 
 
 def heroku_test():
-    local("heroku run nosetest -v")
+    local("heroku run nosetests -v")
 
 
 def deploy():
