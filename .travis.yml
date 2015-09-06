@@ -1,15 +1,15 @@
-# specify language
 language:
-  - python
-
-# specify python versions
+- python
 python:
-  - "2.7"
-
-# install dependencies
+- '2.7'
 install:
-  - pip install -r requirements.txt
-
-# run tests
+- pip install -r requirements.txt
 script:
-  - nosetests
+- nosetests
+deploy:
+  provider: heroku
+  api_key:
+    secure: IEE2Fxg9GHyTMxrvOBBZlc+5FtG0qBcPGxrm8Iw7Ib+3dgfwx1dIhuvM0wvnRK/VrozXMSP5r3cU3Vbe5JZ4s910wBgILSupjLa5Q2pWRPGUs22Njy6NjBsofvTHWfTrCCxMOLUcjIRXV8/2Ewnk90BbBJWg/DVT4oCPw8N6bVco2MzA2hAZV9N24geQO2Y00olTRGjM6QisbxeOJ6PHUOrOZqw86bhrvj/LPX1Ky5q2K5UEF4UmBOsPV9xhLM0+wBQXRu1y4Uo+C6WULMBDdAwH2uqCb6hL5xzJk5A0XBjk8rZF2ai4O/CNja/K3q6YmiLSAfQ9c4+pZPGZqUKwVOnN4zFdlisB0SHzBGyyvMqVKkz7+law3eF/hWqTxqLAZb3Oh7wQjVvJ12IYHgnK1Q4SzI+S7OeYQjJrMTgYj0wbppgLEG+XTPPISZ8ZJflP3a+9cvhyGgB4VrinIwnn6JLE0K9IXmGKtj5zzVqpixgGkB1/xK5yH9NBUcn1y9FHpaKMvt9JRctQhyGNnaY9PbB2QBUD3gcNGMA9k599qBTVT/GcKuCaGN+R4ZrmmOoZpIzKxzYvY9CRXoH43NXJOBtgzhSx7QMh3Qqq3HdPiN6wkxCJyWzF+1sGOMQ7wYgmXxLR3vxopviaisZ3y69S+781uB7ia4HeqwKXX+RSd9Q=
+  app: warm-refuge-1580
+  on:
+    repo: TroveLem/flasktaskr
